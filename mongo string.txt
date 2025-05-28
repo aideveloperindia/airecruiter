@@ -1,0 +1,1 @@
+mongo db connection string is mongodb+srv://aideveloperindia:1Aditya@1Pranitha@100@airecruiter.0l8ted7.mongodb.net/?retryWrites=true&w=majority&appName=airecruiter

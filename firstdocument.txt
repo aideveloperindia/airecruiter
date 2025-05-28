@@ -1,0 +1,254 @@
+# RecruitMate AI - Project Documentation
+
+## 1. Project Overview
+
+### Purpose
+RecruitMate AI is an advanced recruitment automation platform designed to revolutionize the US/India IT recruitment process by replacing traditional human recruiters with AI-powered solutions.
+
+### Target Users
+- Recruitment/Staffing Company Owners
+- HR Managers
+- Technical Hiring Managers
+- Recruitment Agencies
+
+### Core Value Proposition
+- Reduce recruitment costs by 70-80%
+- Accelerate hiring process by 5x
+- Improve candidate-job matching accuracy
+- Eliminate human bias in recruitment
+- Scale recruitment operations efficiently
+
+## 2. Technical Stack
+
+### Frontend
+- **Framework**: Next.js 14 (App Router)
+- **Language**: TypeScript
+- **Styling**: 
+  - Tailwind CSS
+  - shadcn/ui (Component Library)
+  - Framer Motion (Animations)
+  - CSS Variables (Theming)
+
+### Backend
+- **Runtime**: Node.js
+- **API**: Next.js API Routes
+- **Database**: MongoDB with Mongoose
+- **Caching**: Redis (for performance)
+
+### AI/ML Integration
+- **LLM**: Hugging Face Models
+- **Resume Parsing**: GPT-4 API
+- **Skill Matching**: Custom ML Model
+- **Sentiment Analysis**: Natural Language Processing
+
+### Authentication & Security
+- **Auth**: NextAuth.js
+- **Security**: 
+  - JWT Tokens
+  - Role-Based Access Control (RBAC)
+  - Rate Limiting
+  - Input Validation (Zod)
+
+### DevOps
+- **Deployment**: Vercel
+- **Version Control**: Git
+- **CI/CD**: GitHub Actions
+- **Monitoring**: Vercel Analytics
+
+## 3. Core Features
+
+### 1. Smart Resume Processing
+- PDF/Doc parsing
+- Skill extraction
+- Experience analysis
+- Education verification
+- Contact detail extraction
+
+### 2. Job Requirement Analysis
+- Requirement parsing
+- Skill taxonomy mapping
+- Experience level detection
+- Salary range suggestion
+- Location preference handling
+
+### 3. AI-Powered Matching Engine
+- Skill compatibility scoring
+- Experience relevance matching
+- Cultural fit assessment
+- Salary expectation matching
+- Location preference matching
+
+### 4. Automated Communication
+- Email templates
+- Interview scheduling
+- Status updates
+- Feedback collection
+- Offer letter generation
+
+### 5. Analytics Dashboard
+- Match quality metrics
+- Pipeline analytics
+- Time-to-hire tracking
+- Cost-per-hire analysis
+- ROI calculations
+
+### 6. Client Portal
+- Job posting interface
+- Candidate pipeline view
+- Interview scheduling
+- Feedback submission
+- Hiring analytics
+
+### 7. Candidate Portal
+- Profile management
+- Job recommendations
+- Application tracking
+- Interview scheduling
+- Feedback submission
+
+## 4. Project Structure
+
+```
+recruitmate-ai/
+├── src/
+│   ├── app/                 # Next.js App Router
+│   │   ├── (auth)/         # Authentication routes
+│   │   ├── (dashboard)/    # Protected dashboard routes
+│   │   ├── api/            # API routes
+│   │   └── layout.tsx      # Root layout
+│   ├── components/         # React Components
+│   │   ├── ui/            # UI Components
+│   │   ├── forms/         # Form Components
+│   │   ├── dashboard/     # Dashboard Components
+│   │   └── shared/        # Shared Components
+│   ├── lib/               # Core Libraries
+│   │   ├── ai/           # AI/ML Integration
+│   │   ├── auth/         # Authentication
+│   │   ├── api/          # API Utilities
+│   │   └── utils/        # Helper Functions
+│   ├── models/           # Database Models
+│   ├── types/            # TypeScript Types
+│   ├── hooks/            # Custom React Hooks
+│   ├── styles/           # Global Styles
+│   └── config/           # Configuration Files
+├── public/               # Static Assets
+├── tests/               # Test Files
+└── docs/                # Documentation
+```
+
+## 5. Database Schema
+
+### Candidate Schema
+```typescript
+{
+  id: ObjectId,
+  name: String,
+  email: String,
+  phone: String,
+  skills: [String],
+  experience: Number,
+  currentRole: String,
+  expectedSalary: Number,
+  location: String,
+  resume: {
+    url: String,
+    parsed: Object
+  },
+  status: String,
+  createdAt: Date,
+  updatedAt: Date
+}
+```
+
+### Job Schema
+```typescript
+{
+  id: ObjectId,
+  title: String,
+  client: {
+    id: ObjectId,
+    name: String
+  },
+  requirements: {
+    skills: [String],
+    experience: Number,
+    location: String,
+    salary: {
+      min: Number,
+      max: Number
+    }
+  },
+  status: String,
+  createdAt: Date,
+  updatedAt: Date
+}
+```
+
+## 6. Implementation Phases
+
+### Phase 1: Foundation (Week 1-2)
+- Project setup with Next.js 14
+- Database integration
+- Basic UI components
+- Authentication system
+- Core API routes
+
+### Phase 2: Core Features (Week 3-4)
+- Resume parsing
+- Job posting
+- Basic matching algorithm
+- Dashboard implementation
+- Email notifications
+
+### Phase 3: AI Integration (Week 5-6)
+- Advanced matching algorithm
+- Skill analysis
+- Automated screening
+- Sentiment analysis
+- Recommendation engine
+
+### Phase 4: Enhancement (Week 7-8)
+- Analytics implementation
+- Advanced search
+- Performance optimization
+- Security hardening
+- Testing & QA
+
+## 7. Security Measures
+
+- JWT-based authentication
+- Rate limiting on API routes
+- Input validation
+- XSS protection
+- CSRF protection
+- Data encryption
+- Regular security audits
+
+## 8. Performance Optimization
+
+- Image optimization
+- Code splitting
+- Lazy loading
+- Caching strategies
+- Database indexing
+- API response optimization
+- CDN integration
+
+## 9. Monitoring & Analytics
+
+- Error tracking
+- Performance monitoring
+- User analytics
+- Business metrics
+- System health checks
+- Automated alerts
+
+## 10. Future Enhancements
+
+- Video interview integration
+- Blockchain for verification
+- Mobile app development
+- Multi-language support
+- Advanced analytics
+- Integration with job boards
+- Background verification 
