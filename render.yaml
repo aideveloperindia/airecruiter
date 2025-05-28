@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: airecruiter-backend
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python src/main.py
+    envVars:
+      - key: MONGODB_URI
+        sync: false
+      - key: GMAIL_EMAIL
+        sync: false
+      - key: GMAIL_PASSWORD
+        sync: false
+      - key: ENVIRONMENT
+        value: production
+      - key: PORT
+        value: 10000
+    autoDeploy: true
+    branch: main
+    rootDir: .
+    plan: free 

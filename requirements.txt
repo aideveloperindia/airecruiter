@@ -1,0 +1,35 @@
+# Core dependencies
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+python-multipart==0.0.6
+
+# Database
+pymongo==4.6.0
+motor==3.3.2
+
+# Data processing and AI
+pandas==2.1.4
+numpy==1.24.4
+scikit-learn==1.3.2
+spacy==3.7.2
+
+# Web scraping
+selenium==4.16.0
+beautifulsoup4==4.12.2
+requests==2.31.0
+lxml==4.9.3
+
+# Email
+smtplib2==0.2.1
+
+# Scheduling
+APScheduler==3.10.4
+
+# Environment and configuration
+python-dotenv==1.0.0
+pydantic==2.5.2
+pydantic-settings==2.1.0
+
+# Utilities
+python-dateutil==2.8.2
+pytz==2023.3 
